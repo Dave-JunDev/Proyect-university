@@ -1,1 +1,42 @@
+:root{
+    --blak: #020102;
+    --grey: #241B35;
+    --pink: #CB80FF;
+    --purple: #8956F1;
+}
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    height: 75px;
+    width: 100vw;
+}
+
+.btn-outline-success{
+    color: white;
+    border-color: var(--purple);
+}
+.btn-outline-success:hover{
+    color: #fff;
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+.navbar-dark{
+    background-color: var(--blak);
+}
+.form-control{
+    border-color: var(--purple);
+}
+.banner{
+    height: 600px;
+    width: 100vw;
+}
+.banner-img{
+    width:600px;
+    height:600px;
+    border-radius: 300px;
+    object-fit: cover;
+}
