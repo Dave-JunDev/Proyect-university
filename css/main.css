@@ -1,8 +1,8 @@
 :root{
-    --blak: #020102;
-    --grey: #241B35;
-    --pink: #CB80FF;
-    --purple: #8956F1;
+    --primary: #00C4CC;
+    --second: #3A465C;
+    --third: #B9EDED;
+    --additional:#DBE3E8;
 }
 
 *{
@@ -11,32 +11,89 @@
 }
 
 .header{
-    height: 75px;
-    width: 100vw;
+    height: 56px;
+    width: 100%;
+}
+
+.btn-outline-light{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-light:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
 }
 
 .btn-outline-success{
     color: white;
-    border-color: var(--purple);
+    border-color: var(--third);
 }
 .btn-outline-success:hover{
-    color: #fff;
-    background-color: var(--purple);
-    border-color: var(--purple);
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
 }
 .navbar-dark{
-    background-color: var(--blak);
+    background-color: var(--primary);
 }
 .form-control{
-    border-color: var(--purple);
+    border-color: var(--second);
 }
-.banner{
-    height: 600px;
-    width: 100vw;
-}
-.banner-img{
-    width:600px;
-    height:600px;
-    border-radius: 300px;
+.w-100{
+    height: 400px;
     object-fit: cover;
+}
+.candidatos{
+    width: 80%;
+    margin:  20px auto  20px auto;
+}
+.cont-cards{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:var(--third);
+    border-radius: 30px;
+}
+.title{
+     width: 92%;
+     margin: auto;
+}
+
+.card{
+    flex: none !important;
+    width: 27%;
+    height: 80%;
+    margin: auto;
+}
+
+
+
+#carouselExampleCaptions{
+    height: 400px;
+}
+#carousel-item img{
+    height: 400px;
+    
+}
+
+#copyright{
+    border-top: 1px solid white;
+    background-color: var(--primary);
+}
+#footer{
+    background-color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }

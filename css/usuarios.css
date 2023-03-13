@@ -1,0 +1,74 @@
+:root{
+    --primary: #00C4CC;
+    --second: #3A465C;
+    --third: #B9EDED;
+    --additional:#DBE3E8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    height: 56px;
+    width: 100%;
+}
+
+.btn-outline-light{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-light:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
+}
+
+.btn-outline-success{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-success:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
+}
+.navbar-dark{
+    background-color: var(--primary);
+}
+.form-control{
+    border-color: var(--second);
+}
+.banner{
+    height: 400px;
+    width: 100vw;
+}
+.banner-img{
+    width:400px;
+    height:400px;
+    border-radius: 200px;
+    object-fit: cover;
+}
+
+
+#copyright{
+    border-top: 1px solid white;
+    background-color: var(--primary);
+}
+#footer{
+    background-color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}

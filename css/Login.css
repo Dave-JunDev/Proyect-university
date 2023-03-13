@@ -1,0 +1,138 @@
+:root{
+    --primary: #00C4CC;
+    --second: #3A465C;
+    --third: #B9EDED;
+    --additional:#DBE3E8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    height: 56px;
+    width: 100%;
+}
+
+.btn-outline-light{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-light:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
+}
+
+.btn-outline-success{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-success:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
+}
+.navbar-dark{
+    background-color: var(--primary);
+}
+.form-control{
+    border-color: var(--second);
+}
+
+.content{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.cont-img {
+    width: 50%;
+    border-right: 1px solid var(--third);
+}
+
+.conten-login{
+    flex-direction: column;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.conten-login{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.login{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#Ingresar{
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--third);
+    transition: 0.5s ease-in;
+}
+
+#Ingresar:hover{
+    color: black;
+    background-color: var(--third);
+    border-color: var(--third);
+}
+
+#Registrar{
+    margin-top: 5%;
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--third);
+    transition: 0.5s ease-in;
+}
+#Registrar:hover{
+    color: black;
+    background-color: var(--third);
+    border-color: var(--third);
+}
+
+.register-Form button{
+    background-color: var(--primary);
+    border-color: var(--third);
+    transition: 0.5s ease-in;
+}
+
+.register-Form button:hover{
+    color: black;
+    background-color: var(--third);
+    border-color: var(--third);
+
+}
+
+#copyright{
+    border-top: 1px solid white;
+    background-color: var(--primary);
+}
+#footer{
+    background-color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
