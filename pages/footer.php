@@ -7,36 +7,32 @@
   <footer class=" text-center text-white" id="footer">
     <div class="container p-4">
       <section class="mb-4">
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fa-brands fa-facebook-f"></i></a>
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <p class="txt-footer">Suscribete al newsletter para conocer nuestras novedades</p>
       </section>
-      <section class="">
-        <form action="">
-          <div class="row d-flex justify-content-center">
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
+      
+      <section class="aditional-footer">
+           <div class="" id="container-icons">
+                <a class="btn btn-primary btn-floating " href="#!" role="button" id="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="btn btn-primary btn-floating " href="#!" role="button" id="icons"><i class="fab fa-instagram"></i></a>
             </div>
-            <div class="col-md-5 col-12">
+            
+        <div class="form-footer">
+        <form action="" class="from">
+           
               <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example2" class="form-control" placeholder="Email Addres"/>
-              </div>
-            </div>
-
-            <div class="col-auto">
-              <button type="submit" class="btn btn-outline-light mb-4">
+              <div class="form-outline form-white mb-4" id="pruv">
+                <input type="email" id="email" class="form-control" placeholder="Email Addres"/>
+                 <button type="submit" class="btn-footer">
                 Subscribe
               </button>
-            </div>
-          </div>
+              </div>
+           
         </form>
+         </div>
       </section>
 
     </div>
     <div class="text-center p-3" id="copyright">
-      © 2023 Copyright:
-      <a class="text-white" href="#"> PandaWork </a>
+      © 2023 Copyright PandaWork 
     </div>
 </footer>

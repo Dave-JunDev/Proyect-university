@@ -13,6 +13,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/691e44487d.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/footer.css">
     </head>
     <body>
         <?php include('./header.php') ?>
@@ -24,17 +26,15 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./img/Banner-home.jpg" class="d-block w-100" alt="...">
+      <img src="./img/Banner/Banner_1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h1 style="">Panda Work</h1>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="./img/Banner-2.jpg" class="d-block w-100" alt="...">
+      <img src="./img/Banner/Banner_2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h1>Panda Work</h1>
       </div>
     </div>
   </div>
@@ -48,10 +48,88 @@
   </button>
 </div>
 
-    <section class="candidatos">
-       
-         <h2>Nuestros candidatos</h2>
+    <section class="info">
 
+        
+        <div class="ejm-cand">
+            <div class="space">
+                        <h1>Bienvenido a <br> <span class="panda">Panda Work</span></h1>
+        
+                <p>
+                    Nuestra plataforma te ayudará a ponerte en contacto con los mejores profesionales del país. 
+
+                    Con esta plataforma podrás buscar personal de acuerdo a tus necesidades y también conocer
+                    más acerca de ellos.
+                    Si eres candidato podras encontrar las mejores ofertas y empresas del país.
+                </p>
+            </div>
+            <div id="card">
+                        <div class="card-img">
+                            <img src="./img/persona1.jpg" alt="img-persona">
+                        </div>
+                        <div class="card-name">
+                            <h5 class="">MARCO BUITRAGO</h5>
+                        </div>
+                            <div class="card-text">
+                                <p>Amante de la moda y la creación, con un largo camino en diferentes casas de diseño como casa azul, fashion me, entre otros.</p>
+                            </div>
+                        <div class="card-btns">
+                            <button class="btn-moreInfo">Conocer más sobre Marco</button>
+                            <button class="btn-job">Ver perfil aqui!</button>
+                        </div>
+            </div>
+            <div id="card">
+                        <div class="card-img">
+                             <img src="./img/persona2.jpg" alt="img-persona">
+                        </div>
+                        <div class="card-name">
+                            <h5 class="">ANA TORRES</h5>
+                        </div>
+                            <div class="card-text">
+                                <p>Amante de la moda y la creación, con un largo camino en diferentes casas de diseño como casa azul, fashion me, entre otros.</p>
+                            </div>
+                        <div class="card-btns">
+                            <button class="btn-moreInfo">Conocer más sobre Ana</button>
+                            <button class="btn-job">Ver perfil aqui!</button>
+                        </div>
+            </div>
+        </div>
+
+    <div class="metricas">
+        <div class="card-metric">
+             <img src="./img/Ipersonas.png">
+            <h4> 
+                <p><span>+ de 5.520</span><br>
+                personas contratadas
+                </p>
+            </h4>
+        </div>
+
+        <div class="card-metric">
+             <img src="./img/Iempleos.png">
+            <h4> 
+                <p><span>+ de 2.000</span><br>
+                empleos disponibles
+                </p>
+            </h4>
+        </div>
+
+      <div class="card-metric">
+             <img src="./img/Icompany.png">
+            <h4> 
+                <p><span>+ de 30</span><br>
+                empresas contratando
+                </p>
+            </h4>
+        </div>
+
+    </div>
+ 
+    </section>
+
+
+   <!-- <section class="candidatos">
+         <h2>Nuestros candidatos</h2>
         
         <div class="cont-cards">
         
@@ -62,15 +140,19 @@
                 while($data = mysqli_fetch_array($result, MYSQLI_ASSOC))
                 {
                     ?>
-                    <div class="card">
-                        <div class="card-header bg-transparent border-success">
-                            <h5 class="card-title"><?php echo $data['Nombres']," ",$data['PApellido'] ?></h5>
+                    <div id="card">
+                        <div class="card-img">
+                            <img src="" alt="img-persona">
+                        </div>
+                        <div class="card-name">
+                            <h5 class=""><?php echo $data['Nombres']," ",$data['PApellido'] ?></h5>
+                        </div>
+                            <div class="card-text">
+                                <p>Amante de la moda y la creación, con un largo camino en diferentes casas de diseño como casa azul, fashion me, entre otros.</p>
                             </div>
-                            <div class="card-body bg-transparent">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-primary">Ver perfil aqui!</a>
+                        <div class="card-btns">
+                            <button class="btn-moreInfo">Conocer mas sobre <?php echo $data['Nombres']?></button>
+                            <button class="btn-job">Ver perfil aqui!</button>
                         </div>
                     </div>
                     <?php
@@ -78,7 +160,7 @@
                 
             ?>
                
-        </div>
+        </div> -->
         
         
 

@@ -10,8 +10,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/691e44487d.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./../css/Login.css">   
-        </head>
+        <link rel="stylesheet" href="./../css/usuarios.css">   
+        <link rel="stylesheet" href="./../css/header.css">
+        <link rel="stylesheet" href="./../css/footer.css">
+    </head>
     <body>
     </body>
 
@@ -19,16 +21,24 @@
 
         <section class="content">
             <div class="cont-img">
-                <img alt="prueba" class="img" src="./../img/Banner-home.jpg">
+                <div class="circle">
+                     <img alt="prueba" class="img" src="./../img/Logo/logo_b.png">
+                </div>
+               
+               <div class="text-img">
+                    <p>Nuestra plataforma de empleo, te ayudará a acceder a ofertas que se ajusten a tu perfil y así mismo las empresas podrán conocer más de ti y contactarte.</p>
+               </div>
+               
+               <div class="button-false">
+                    <button class="btn-false">!BIENVENIDO!</button>
+               </div>
+               
             </div>
             <div class="conten-login">
-                <div class="title">
-                    <h1>Ingreso candidatos</h1>
-                </div>
-                
-                <form method="post" class="login" action="./../logic/services/loginService.php">
-                    <input class="form-control mb-3" type="email" placeholder="Email" name="Email" required>
-                    <input class="form-control mb-3" type="password" placeholder="*****" name="Pass" required>
+                <h3>Ingreso Usuarios</h3>
+                <form class="login">
+                    <input class="form-control mb-3" type="email" placeholder="Email" name="Email">
+                    <input class="form-control mb-3" type="password" placeholder="*****" name="Pass">
                     <button class="form-control mt-6 mb-6" type="submit" name="login" id="Ingresar">Ingresar</button>
                     <button type="button" class="btn btn-primary mt-6" data-bs-toggle="modal" data-bs-target="#register" id="Registrar">Registrar</button>
                 </form>
