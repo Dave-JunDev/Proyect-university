@@ -113,26 +113,26 @@
                             <div class="row">
                                 <div class="col">
                                     <label>Nombres y apellidos</label>
-                                    <input class="form-control" type="text" value="<?php echo $info['Nombres'] ,' ',  $info['PApellido'] , $info['SApellido'] ?>">
+                                    <input class="form-control" type="text" value="<?php echo $info['Nombres'] ,' ',  $info['PApellido'] , $info['SApellido'] ?>" name="nombre">
                                 </div>
                                 <div class="col">
                                     <label>Edad</label>
-                                    <input class="form-control" type="number" value="<?php echo $diff->y ?>">
+                                    <input class="form-control" type="number" value="<?php echo $diff->y ?>" name="edad">
                                 </div>
                                 <div class="col">
                                     <label>Lugar de residencia</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" name="residencia">
                                 </div>
                             </div>
                             
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label" >Celular</label>
-                                    <input class="form-control" type="text" value="<?php echo $info['Telef'] ?>">
+                                    <input class="form-control" type="text" value="<?php echo $info['Telef'] ?>" name="telef">
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Correo electronico</label>
-                                    <input  class="form-control" type="email" value="<?php echo $usuario ?>">
+                                    <input  class="form-control" type="email" value="<?php echo $usuario ?>" name="email">
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Remoto / presencial</label> 
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Disponibilidad de trasladarse a otro pais</label>
-                                    <select name="tipo_jornada" class="form-control">
+                                    <select name="tipo_traslado" class="form-control">
                                         <option value="1" selected>Si</option>
                                         <option value="2" >No</option>
                                     </select>                           
@@ -163,7 +163,7 @@
                             <div class="row">
                                 <div class="col">
                                 <label>¿Cómo te describirías?</label>
-                                <textarea class="form-control" placeholder="" id="text-infop"></textarea>
+                                <textarea class="form-control" placeholder="" id="text-infop" name="descp_personal"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -195,15 +195,15 @@
                         ?>
                             
                             <label>Ingresa tu formacion academica aqui</label>
-                            <textarea placeholder="" class="form-control" id="text-fomacion"></textarea>
+                            <textarea placeholder="" class="form-control" id="text-fomacion" name="descp_formacion"></textarea>
                         </div>
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                             <label>Ingresa toda tu experiencia aqui</label>
-                            <textarea placeholder="" class="form-control" id="text-fomacion"></textarea>
+                            <textarea placeholder="" class="form-control" id="text-fomacion" name="decp_exp"></textarea>
                             
                             <div class="container-buttons">
-                                <input type="submit" value="Guardar" class="btn btn-info">
-                                <input type="submit" value="Eliminar"  class="btn btn-danger">
+                                <input type="submit" value="Guardar" class="btn btn-info" name="GuardarInfUser">
+                                <input type="submit" value="Eliminar"  class="btn btn-danger" name="Eliminar_u">
                             </div>
                         </div>
                     </div>
