@@ -28,25 +28,29 @@
 
         $sections = explode(" ", $name);
 
-        $query = "UPDATE `Usuarios` SET ,`Nombres`= '$sections[0]',`PApellido`='$sections[1]',`SApellido`='$sections[2]',`Email`='$email',`Telef`='$telef',`Fecha_nac`='[value-8]',`id_carrera`='$carrera' WHERE `email` = $usuario";
+
+        $query = "UPDATE `Usuarios` SET `Nombres`= '$sections[0]',`PApellido`='$sections[1]',`SApellido`='$sections[2]',`Email`='$email',`Telef`='$telef',`id_carrera`='$carrera' WHERE `email` = '$usuario'";
 
         $result = excetQuery($con, $query);
-
-        if(!$result){
+         
+        if($result === FALSE){
             $error = $error + " No se puedo actualizar la informacion personal";
         }
 
-        $searchId = "SELECT `Id` FROM `Usuarios` WHERE Email = '$usuario'";
+        $searchId = "SELECT Id FROM `Usuarios` WHERE Email = '$usuario'";
         $resultSearch = searchQuery($con, $searchId);
-        $id_usuario = $resultSearch['Id'];
+        $info = mysqli_fetch_assoc($resultSearch);
+        $id_usuario = $info['Id'];
+
 
         $query = "SELECT additional_info_user.ID, Usuarios.Id FROM `additional_info_user` INNER JOIN `Usuarios` On additional_info_user.id_usuario = Usuarios.ID WHERE Usuarios.Email  =  '$usuario'";
 
         $fila = searchQuery($con, $query);
+        $info = mysqli_fetch_assoc($fila);
 
-        if($fila['ID'] != NULL)
+        if($info['ID'] != NULL)
         {
-            $id = $fila['ID'];
+            $id = $info['ID'];
             $update = "UPDATE `additional_info_user` SET `tipo_trabajo`='$tipo_job',`tipo_jornada`='$tipo_jornada',`traslado`='$tipo_traslado',`lugar_residencia`='$residencia',`descp`='$descp_personal' WHERE `ID` = '$id'";
             $updateExp = "UPDATE `exp_usuario` SET `descp`='$decp_exp',`descp_academica`='$descp_formacion' WHERE `id_usuario` = '$id_usuario'";
             $result = excetQuery($con, $update);
