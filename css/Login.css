@@ -112,10 +112,87 @@
     flex-wrap: wrap;
     background-color: var(--additional);
 }
+
+.conten-login h2{
+    font-weight: bold;
+}
 .login{
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+
+.Email{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    background-color: #BABBBC;
+    border-radius: 30px;
+    height:3em;
+    margin-bottom: 1rem;
+}
+
+.Email input{
+    width:80%;
+    background-color: #BABBBC;
+    border: none;
+}
+.Email input:hover{
+
+    background-color: #BABBBC;
+    border: none;
+}
+
+.Email i{
+    margin-right: 1rem;
+    font-size: 25px;
+}
+
+.Pass{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    background-color: #BABBBC;
+    border-radius: 30px;
+    height:3em;
+    margin-bottom: 1rem;
+}
+
+.Pass input{
+    width:80%;
+    background-color: #BABBBC;
+    border: none;
+}
+.Pass input:hover{
+
+    background-color: #BABBBC;
+    border: none;
+}
+
+.Pass i{
+    margin-right: 1rem;
+    font-size: 25px;
+}
+
+.ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
+}
+
+.text-ok{
+    color:  #198754 ;
+}
+
+.text-error{
+    color: #dc3545;
 }
 #Ingresar{
     color: white;
@@ -123,6 +200,7 @@
     border-color: var(--third);
     transition: 0.5s ease-in;
     font-weight: bold;
+    border-radius: 2em;
 }
 
 #Ingresar:hover{
@@ -138,7 +216,8 @@
     background-color: var(--primary);
     border-color: var(--third);
     transition: 0.5s ease-in;
-     font-weight: bold;
+    font-weight: bold;
+    border-radius: 2em;
 }
 #Registrar:hover{
     color: black;
@@ -146,13 +225,13 @@
     border-color: var(--third);
 }
 
-.register-Form button{
+.register-Form #registrar{
     background-color: var(--primary);
     border-color: var(--third);
     transition: 0.5s ease-in;
 }
 
-.register-Form button:hover{
+.register-Form #registrar:hover{
     color: black;
     background-color: var(--third);
     border-color: var(--third);

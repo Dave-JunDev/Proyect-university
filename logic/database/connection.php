@@ -10,5 +10,20 @@
     if (!$con) {
         die("Connection failed: " . mysqli_connect_error());
     }
+
+    function excetQuery($con, $query){
+        $result = mysqli_query($con, $query); 
+       
+        if ($result === TRUE){
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
     
+    function searchQuery($con, $query){
+        return mysqli_query($con, $query); 
+    }
 ?>

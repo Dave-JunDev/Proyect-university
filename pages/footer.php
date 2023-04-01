@@ -1,9 +1,3 @@
-<?php
-
-    require_once "./../logic/database/connection.php";
-    include('./../logic/services/modalError.php');
-?>
-
   <footer class=" text-center text-white" id="footer">
     <div class="container p-4">
       <section class="mb-4">

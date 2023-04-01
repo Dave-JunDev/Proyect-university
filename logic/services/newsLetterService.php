@@ -8,9 +8,14 @@
        
        $result = mysqli_query($con, $query);
        
-       if($result === TRUE){
+       echo $query;
+       
+        if($result === TRUE){
           header("Location: ./../../../index.php?A=T");
-       }
+        }
+        else{
+         header("Location: ./../../../index.php?F=T");
+        }
    }
    else if (isset($_POST['newsLatter']))
    {
@@ -19,8 +24,13 @@
        
         $result = mysqli_query($con, $query);
        
+        echo $query;
+       
         if($result === true){
-           
+           header("Location: ./../../../index.php?A=T");
+        }
+        else{
+           header("Location: ./../../../index.php?F=T");
         }
 
    }

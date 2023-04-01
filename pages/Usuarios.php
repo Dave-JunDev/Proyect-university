@@ -13,9 +13,9 @@
         <link rel="stylesheet" href="./../css/usuarios.css">   
         <link rel="stylesheet" href="./../css/header.css">
         <link rel="stylesheet" href="./../css/footer.css">
+        
     </head>
     <body>
-    </body>
 
         <?php include('./header.php') ?>
 
@@ -30,16 +30,22 @@
                </div>
                
                <div class="button-false">
-                    <button class="btn-false">!BIENVENIDO!</button>
+                    <button class="btn-false">¡BIENVENIDO!</button>
                </div>
                
             </div>
             <div class="conten-login">
-                <h3>Ingreso Usuarios</h3>
-                <form class="login">
-                    <input class="form-control mb-3" type="email" placeholder="Email" name="Email">
-                    <input class="form-control mb-3" type="password" placeholder="*****" name="Pass">
-                    <button class="form-control mt-6 mb-6" type="submit" name="login" id="Ingresar">Ingresar</button>
+                <h2>Ingreso Usuarios</h2>
+                <form class="login" method="post" action="./../logic/services/loginService.php">
+                    <div class="Email">
+                        <i class="fa-solid fa-user"></i>
+                         <input class="form-control" type="email" placeholder="Email" name="Email">
+                    </div>
+                    <div class="Pass">
+                        <i class="fa-solid fa-lock"></i>
+                        <input class="form-control" type="password" placeholder="*****" name="Pass">
+                    </div>
+                    <button class="form-control mt-6 mb-6" type="submit" name="loginU" id="Ingresar">Ingresar</button>
                     <button type="button" class="btn btn-primary mt-6" data-bs-toggle="modal" data-bs-target="#register" id="Registrar">Registrar</button>
                 </form>
             </div>
@@ -59,20 +65,55 @@
             <input class="form-control mb-3" type="text" placeholder="Primer Apellido" name="Papellido" required>
             <input class="form-control mb-3" type="text" placeholder="Segundo Apellido" name="Sapellido">
             
-            <input class="form-control mb-3" type="email" placeholder="Email" name="Email" required>
+            <input class="form-control mb-3" type="email" placeholder="Email de contacto" name="Email" id="email1" required>
+            <input class="form-control mb-3" type="email" placeholder="Confirmar Email de contacto" id="email2" required>
+            
+            <div class="ocultar" id="ErrorC">
+                <lable class="text-error">Correos diferentes</lable>
+            </div>
+            <div class="ocultar" id="OkC">
+                 <lable class="text-ok">Correos iguales</lable>
+            </div>
+            
             <input class="form-control mb-3" type="telef" placeholder="telefono" name="Telef" required>
             
             <label>Contraseña: </label>
-            <input class="form-control mb-3" type="password" placeholder="*****" name="Pass1" required>
+            <input class="form-control mb-3" type="password" placeholder="*****" name="Pass1" id="pswd1" required>
             <label>Confirmar contraseña: </label>
-            <input class="form-control mb-3" type="password" placeholder="*****" name="Pass2" required>
+            <input class="form-control mb-3" type="password" placeholder="*****" name="Pass2" id="pswd2" required>
+            
+            <div class="ocultar" id="Error">
+                <lable class="text-error">Contraseñas diferentes</lable>
+            </div>
+            <div class="ocultar" id="Ok">
+                 <lable class="text-ok">Contraseñas iguales</lable>
+            </div>
+
             
             <label>Fecha de nacimiento: </label>
             <input class="form-control mb-3" type="date" name="DateNac" required>
             <label>Carrera: </label>
-            <input class="form-control mb-3" type="text" placeholder="Carrera" name="Carrera" required>
+           
+
+                
+                <?php 
+                    include('./../logic/database/connection.php');
+                    $sql = "SELECT ID, descp FROM carreras ORDER BY descp";
+                
+                    $resultado = mysqli_query($con, $sql);
+                
+                    echo '<select name="carrera" class="form-control mb-3">';
+                    while ($fila = mysqli_fetch_assoc($resultado)) {
+                        echo '<option value="' . $fila['ID'] . '" name="carrera">' . $fila['descp'] . '</option>';
+                    }
+                    echo '</select>';
+                    
+                    mysqli_close($con);
+                ?>
+                
+
             
-            <button type="submit" class="btn btn-primary" name="registrar">Registrar</button>
+            <input type="submit" class="btn btn-primary" name="registrar" id="registrar" value="Registrar">
        </form>
       </div>
       <div class="modal-footer">
@@ -81,8 +122,9 @@
     </div>
   </div>
 </div>
-        <?php include('./footer.php') ?>
-
+    
+    <?php include('./footer.php') ?>
+    
     <?php
         include('./../logic/services/modalError.php');
         $Failed = $_GET['A'];
@@ -97,6 +139,10 @@
           ModalError('Error al registrar','Por favor valide la informacion ingresada e intente nuevamente');
         }
     ?>
-    
+
+    <script src="./../js/valPass.js"></script>
     <script src="./../js/controlModal.js"></script>
+    
+    
+    </body>
 </html>

@@ -17,12 +17,12 @@
             </div>
             
         <div class="form-footer">
-        <form action="" class="from">
+        <form action="./logic/services/newsLetterService.php" class="from" method="post">
            
               <!-- Email input -->
               <div class="form-outline form-white mb-4" id="pruv">
-                <input type="email" id="email" class="form-control" placeholder="Email Addres"/>
-                 <button type="submit" class="btn-footer">
+                <input type="email" id="email" class="form-control" placeholder="Email Addres" name="email"/>
+                 <button type="submit" class="btn-footer" name="newsInd">
                 Subscribe
               </button>
               </div>
