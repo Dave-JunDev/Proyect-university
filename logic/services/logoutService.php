@@ -1,14 +1,17 @@
 <?php
-
+    session_start();
     if(isset($_POST['Exit']))
     {
-        if($_SESSION['Tipo_user'] === "U")
+        $tipo_user = $_SESSION['tipe_u'];
+        if($tipo_user === 'U')
         {
             session_destroy();
             header("Location: ./../../pages/Usuarios.php?");
+           
         }
         else{
-              header("Location: ./../../pages/Empresas.php?");
+            session_destroy();
+            header("Location: ./../../pages/Empresas.php?");
         }
         
     }

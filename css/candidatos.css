@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 :root{
     --primary: #00C4CC;
     --second: #3A465C;
@@ -8,7 +10,9 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 .navbar{
     padding: 0;
@@ -25,54 +29,6 @@
     background-color: var(--primary);
 }
 
-.btn-outline-success{
-    color: white;
-    background-color: var(--primary);
-    border-color: var(--additional);
-}
-
-.btn-outline-success:hover{
-    color: white;
-    background-color: var(--second);
-    border-color: var(--additional);
-}
-
-.info-user{
-   width: 100%;
-   display:flex;
-   flex-wrap: wrap;
-   
-}
-
-.main-banner{
-    width:30%;
-    background-color: var(--primary);
-    justify-content:center;
-    align-items:center;
-}
-
-.main-banner-emp{
-     width:30%;
-    background-color: var(--additional);
-    justify-content:center;
-    align-items:center;
-}
-.logo{
-    text-align:center;
-}
-.main-banner img{
-    width: 80%;
-    aspect-ratio: 3/2;
-    object-fit: contain;
-}
-.text-banner{
-    text-align:center;
-    width:50%;
-    margin: auto;
-}
-.info{
-    width:70%;
-}
 .form-user{
     width:90%;
     margin: 2em auto;
@@ -156,51 +112,3 @@ li{
     margin-bottom: 1rem;
 }
 
-.btn-buscar{
-    width: 90%;
-    margin: 10px 0 10px 0;
-    border: none;
-    background-color: var(--primary);
-}
-
-.btn-drop{
-    width: 90%;
-    margin: 10px 0 10px 0;
-    border: none;
-    border-top: 1px solid black;
-    background: none;
-}
-
-#emp-col{
-    text-align: center;
-
-}
-#emp-col select{
-    width: 90%;
-    margin: 0 auto;
-}
-.collapse{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.container-cards{
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:center;
-}
-
-::-webkit-scrollbar {
-  width: 1em;
-}
- 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
- 
-::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
