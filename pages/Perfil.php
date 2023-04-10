@@ -253,7 +253,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col" id="emp-col">
-                                <input type="submit" value="Buscar" class="btn-buscar" name="filter" id="filter">
+                                <input type="submit" value="Buscar" class="btn btn-info" name="filter" id="filter">
                             </div>
                             </div>
                         <div class="row">
@@ -353,10 +353,10 @@
                                 echo '<h5 class="card-title"> '. $fila["carrera"]. '</h5>';
                                 echo '<h6 class="card-subtitle mb-2 text-muted">'. $fila["Nombres"] .' '.  $fila["PApellido"] .' '. $fila["SApellido"] .'</h6>';
                                 
-                                $desp = substr($fila['descp_info'], 0, 30);
+                                $desp = substr($fila['descp_info'], 0, 100);
                                 
                                 echo '<p class="card-text">'.$desp.'...</p>';
-                                echo '<a href="./perfilCandidato.php?U='.$fila["Id"].'" class="card-link" target="_blank">Ver perfil aqui!</a>';
+                                echo '<a href="./perfilCandidato.php?U='.$fila["Id"].'" class="btn btn-info" target="_blank">Ver perfil aqui!</a>';
                                 echo '</div>';
                                 echo '</div>';
                             }

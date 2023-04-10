@@ -92,14 +92,14 @@
                                 <span class="small-circle"></span>
                                 <span class="large-circle"></span>
                                </button>
-                               <label>Formacion academica</label>
+                               <label>Formacion académica</label>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="dual-circle-button" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                                 <span class="small-circle"></span>
                                 <span class="large-circle"></span>
                                 </button>
-                                <label>Tu experiencia</label>
+                                <label>Experiencia</label>
                             </li>
                         </ul>
 

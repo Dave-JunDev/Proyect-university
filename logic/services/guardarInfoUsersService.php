@@ -28,11 +28,10 @@
 
         $sections = explode(" ", $name);
 
-
         $query = "UPDATE `Usuarios` SET `Email`='$email',`Telef`='$telef',`id_carrera`='$carrera' WHERE `email` = '$usuario'";
 
         $result = excetQuery($con, $query);
-         
+
         if($result === FALSE){
             $error = $error + " No se puedo actualizar la informacion personal";
         }
@@ -80,8 +79,7 @@
                 $error = $error + " No se pudo guardar la informacion de experiencia y formacion";
             }
         }
-        
-        
+
         if($error === "" ){
             header('Location: ./../../pages/Perfil.php?E=T');
         }
@@ -89,7 +87,7 @@
         {
             header('Location: ./../../pages/Perfil.php?E='.$error.'');
         }
-        
+
     }
     else if(isset($_POST['Eliminar_u']))
     {
@@ -104,12 +102,8 @@
         $result = excetQuery($con, $deleteU);
         $resultExp = excetQuery($con, $deleteExp);
         $resultInf = excetQuery($con, $deleteInfo);
-        
+
         header('Location: ./../../pages/Perfil.php?D=T');
     }
-
-
-
-
 ?>
 
