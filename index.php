@@ -127,45 +127,6 @@
  
     </section>
 
-
-   <!-- <section class="candidatos">
-         <h2>Nuestros candidatos</h2>
-        
-        <div class="cont-cards">
-        
-            <?php
-                $query = "SELECT Nombres, PApellido FROM `Usuarios` WHERE 1 LIMIT 0,3";
-                $result = mysqli_query($con, $query);
-                
-                while($data = mysqli_fetch_array($result, MYSQLI_ASSOC))
-                {
-                    ?>
-                    <div id="card">
-                        <div class="card-img">
-                            <img src="" alt="img-persona">
-                        </div>
-                        <div class="card-name">
-                            <h5 class=""><?php echo $data['Nombres']," ",$data['PApellido'] ?></h5>
-                        </div>
-                            <div class="card-text">
-                                <p>Amante de la moda y la creación, con un largo camino en diferentes casas de diseño como casa azul, fashion me, entre otros.</p>
-                            </div>
-                        <div class="card-btns">
-                            <button class="btn-moreInfo">Conocer mas sobre <?php echo $data['Nombres']?></button>
-                            <button class="btn-job">Ver perfil aqui!</button>
-                        </div>
-                    </div>
-                    <?php
-                }
-                
-            ?>
-               
-        </div> -->
-        
-        
-
-    </section>
-
         <?php include('footer.php') ?> 
         
         <?php
