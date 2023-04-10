@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --primary: #00C4CC;
+    --second: #3A465C;
+    --third: #B9EDED;
+    --additional:#DBE3E8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#active1{
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.btn-outline-light{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-light:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
+}
+
+.btn-outline-success{
+    color: white;
+    border-color: var(--third);
+}
+.btn-outline-success:hover{
+    color: white;
+    background-color: var(--second);
+    border-color: var(--third);
+}
+.navbar-dark{
+    background-color: var(--primary);
+}
+.form-control{
+    border-color: var(--second);
+}
+
+.content{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.cont-img {
+    width: 50%;
+    border-right: 1px solid var(--third);
+}
+
+.conten-login{
+    flex-direction: column;
+}
+
+.circle{
+    height: 250px;
+    width: 250px;
+    background-color: var(--primary);
+    border-radius: 125px;
+    z-index: 0;
+    margin: 10% auto 0 auto;
+}
+
+.img{
+    margin-left: -5.2em;
+    width: 170%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.text-img{
+    width: 40%;
+    margin: 3em auto;
+    text-align: center;
+}
+
+.button-false{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-false{
+    height: 35px;
+    width: 12em;
+    cursor: default !important;
+    font-weight: bold;
+    background-color: white;
+    line-height: 1.5;
+    border-radius: 3rem;
+    font-size: 22px;
+}
+
+.conten-login{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--additional);
+}
+
+.conten-login h2{
+    font-weight: bold;
+}
+.login{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Email{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    background-color: #BABBBC;
+    border-radius: 30px;
+    height:3em;
+    margin-bottom: 1rem;
+}
+
+.Email input{
+    width:80%;
+    background-color: #BABBBC;
+    border: none;
+}
+.Email input:hover{
+
+    background-color: #BABBBC;
+    border: none;
+}
+
+.Email i{
+    margin-right: 1rem;
+    font-size: 25px;
+}
+
+.Pass{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    background-color: #BABBBC;
+    border-radius: 30px;
+    height:3em;
+    margin-bottom: 1rem;
+}
+
+.Pass input{
+    width:80%;
+    background-color: #BABBBC;
+    border: none;
+}
+.Pass input:hover{
+
+    background-color: #BABBBC;
+    border: none;
+}
+
+.Pass i{
+    margin-right: 1rem;
+    font-size: 25px;
+}
+
+.ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
+}
+
+.text-ok{
+    color:  #198754 ;
+}
+
+.text-error{
+    color: #dc3545;
+}
+#Ingresar{
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--third);
+    transition: 0.5s ease-in;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+#Ingresar:hover{
+    color: black;
+    background-color: var(--third);
+    border-color: var(--third);
+   
+}
+
+#Registrar{
+    margin-top: 5%;
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--third);
+    transition: 0.5s ease-in;
+    font-weight: bold;
+    border-radius: 2em;
+}
+#Registrar:hover{
+    color: black;
+    background-color: var(--third);
+    border-color: var(--third);
+}
+
+.register-Form #registrar{
+    background-color: var(--primary);
+    border-color: var(--third);
+    transition: 0.5s ease-in;
+}
+
+.register-Form #registrar:hover{
+    color: black;
+    background-color: var(--third);
+    border-color: var(--third);
+
+}
