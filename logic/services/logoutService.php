@@ -7,13 +7,10 @@
         {
             session_destroy();
             header("Location: ./../../pages/Usuarios.php?");
-           
         }
         else{
             session_destroy();
             header("Location: ./../../pages/Empresas.php?");
         }
-        
     }
-    
 ?>
