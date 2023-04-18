@@ -3,7 +3,7 @@
     require_once "./../logic/database/connection.php";
     
     $usuario = $_SESSION['login_user'];
-    $tipo_user = $_SESSION['tipe_u'];
+    $tipo_user = $_SESSION['Tipo_user'];
 
     if($usuario == NULL){
         header("Location: ./Usuarios.php?");
@@ -319,9 +319,8 @@
                             $idCarrera = $_GET['C'];
                             $PaisId = $_GET['P'];
 
-                            
                             $query = "SELECT u.Id ,u.Nombres, u.PApellido, u.SApellido, ad.descp as descp_info, p.nombre as paisReside, c.descp as carrera from Usuarios u INNER JOIN additional_info_user ad on ad.id_usuario = u.Id INNER JOIN exp_usuario ex on ex.id_usuario = u.Id and ad.id_usuario = ex.id_usuario LEFT JOIN paises p on ad.lugar_residencia = p.id LEFT JOIN carreras c on c.ID = u.id_carrera ";
-                            
+
 
                             if($idCarrera != 0)
                             {
@@ -333,7 +332,6 @@
                                 {
                                     $query =  $query ."Where c.ID = $idCarrera";
                                 }
-                                
                             }
                             else
                             {
@@ -342,19 +340,16 @@
                                     $query = $query ." Where p.Id = $PaisId";
                                 }
                             }
-                            
-                           
-                            
+
                             $resultado = searchQuery($con,$query);
-                        
                             while ($fila = mysqli_fetch_assoc($resultado)) {
                                 echo '<div class="card" style="width: 18rem;">';
                                 echo '<div class="card-body">';
                                 echo '<h5 class="card-title"> '. $fila["carrera"]. '</h5>';
                                 echo '<h6 class="card-subtitle mb-2 text-muted">'. $fila["Nombres"] .' '.  $fila["PApellido"] .' '. $fila["SApellido"] .'</h6>';
-                                
+
                                 $desp = substr($fila['descp_info'], 0, 100);
-                                
+
                                 echo '<p class="card-text">'.$desp.'...</p>';
                                 echo '<a href="./perfilCandidato.php?U='.$fila["Id"].'" class="btn btn-info" target="_blank">Ver perfil aqui!</a>';
                                 echo '</div>';

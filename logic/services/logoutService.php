@@ -2,7 +2,7 @@
     session_start();
     if(isset($_POST['Exit']))
     {
-        $tipo_user = $_SESSION['tipe_u'];
+        $tipo_user = $_SESSION['Tipo_user'];
         if($tipo_user === 'U')
         {
             session_destroy();

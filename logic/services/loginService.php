@@ -19,7 +19,7 @@ if (isset($_POST['loginU'])) {
         header("Location: ./../../pages/Usuarios.php?A=F");
     } else {
         $_SESSION['login_user'] = $user;
-        $_SESSION['tipe_u'] = 'U';
+        $_SESSION['Tipo_user'] = 'U';
         header("Location: ./../../pages/Perfil.php");
     }
 } else if (isset($_POST['loginE'])) {
@@ -37,7 +37,7 @@ if (isset($_POST['loginU'])) {
         header("Location: ./../../pages/Empresas.php?A=F");
     } else {
         $_SESSION['login_user'] = $user;
-        $_SESSION['tipe_u'] = 'E';
+        $_SESSION['Tipo_user'] = 'E';
         header("Location: ./../../pages/Perfil.php");
     }
 } else {

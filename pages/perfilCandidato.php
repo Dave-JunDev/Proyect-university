@@ -5,7 +5,7 @@
         require_once "./../logic/database/connection.php";
       
         $usuario = $_SESSION['login_user'];
-        $tipo_user = $_SESSION['tipe_u'];
+        $tipo_user = $_SESSION['Tipo_user'];
         
         
         $id = $_GET['U'];
