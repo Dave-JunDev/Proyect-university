@@ -3,7 +3,7 @@
     session_start();
 
     $usuario = $_SESSION['login_user'];
-    $tipo_user = $_SESSION['tipe_u'];
+    $tipo_user = $_SESSION['Tipo_user'];
 
     if($usuario == NULL){
         header("Location: ./Usuarios.php?");
